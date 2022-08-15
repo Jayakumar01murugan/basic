@@ -1,0 +1,312 @@
+<html>
+  <head>
+    <title>javascript</title>
+    <script src="./j.js">
+      alert( "From BODY: " + document.head ); // HTMLBodyElement, now it exists
+       
+    </script>
+  </head>
+    <body><p>before script</p>
+      <script>
+         alert(window.innerHeight);
+        // change the background color to red
+        document.body.style.background = "red";
+
+// change it back after 1 second
+setTimeout(() => document.body.style.background = "", 1000);
+document.body.write("in body section");
+        
+         document.write("innside script","<br>")
+        // alert("hi");
+        let res=prompt("enter your name:")
+        document.write(res,"<br>");
+        // confirm("yes or no");
+        let message="hello"
+        alert(message);
+        console.log("in console message")
+        let n = 2;
+        n = n + 5;
+        n = n * 2;
+        document.write(n,"<br>");
+        let y=20;
+        let z=2;
+        let r="5";
+        document.write(y+z+r,"<br>");
+        let aa=0
+        document.write(typeof 0,"<br>") ;// "number"
+        let as=10n
+        document.write(typeof 10n,"<br>"); // "bigint"
+        let c=true
+        document.write(typeof true,"<br>"); // "boolean"
+        let d="foo"
+        document.write(typeof "foo","<br>"); // "string"
+        let e='symbol("id")'
+        document.write( Symbol("id"),"<br>") // "symbol"
+       
+       </script>
+    <p>after script</p>
+    document.
+    <table id="table">
+      <tr>
+        <td>one</td><td>two</td>
+      </tr>
+      <tr>
+        <td>three</td><td>four</td>
+      </tr>
+    </table>
+    
+    <script>
+      // get td with "two" (first row, second column)
+      let td = table.rows[0].cells[0];
+      td.style.backgroundColor = "red";
+      tr.sectionRowIndex; // highlight it
+    </script>
+    </body>
+    
+
+<h1>The Document Object</h1>
+<script>
+  document.writeln("write message<br>");
+  document.writeln("writeln messages");
+  const b=document.createElement("h1");
+  b.innerText="first heading";
+  document.body.appendChild(b);
+const a= document.createElement("p");
+a.innerText="my  first dom element"
+document.body.appendChild(a);
+const s=document.addEventListener("click",functio);
+function functio(){
+  document.getElementsByTagName(p).innerHTML="function"
+}
+document.body.appendChild(s);
+document.url;
+
+</script>
+
+<p id="demo"></p>
+
+<script>
+let url = document.documentURI;
+document.getElementById("demo").innerHTML = url;
+</script>
+<h2>The createElement() Method</h2>
+
+<p>Create a p element with some text:</p>
+
+<script>
+// Create element:
+const para = document.createElement("p");
+para.innerText = "This is a paragraph.";
+
+// Append to body:
+document.body.appendChild(para);
+</script>
+<button onclick="removeHandler()">Remove</button>
+
+<p id="demo"></p>
+
+<script>
+document.addEventListener("mousemove", myFunction);
+
+function myFunction() {
+  document.getElementById("demo").innerHTML = Math.random();
+}
+
+function removeHandler() {
+  document.removeEventListener("mousemove", myFunction);
+}
+</script>
+<p id="dem"></p>
+
+<script>
+document.getElementById("dem").innerHTML = document.readyState;
+</script>
+<h2 class="example">A heading</h2>
+<p class="example">A paragraph.</p> 
+
+<script>
+const nodeList = document.querySelectorAll(".example");
+for (let i = 0; i < nodeList.length; i++) {
+  nodeList[i].style.backgroundColor = "blue";
+}
+</script>
+<p>This is a p element.</p>
+<p>This is a p element.</p>
+
+<script>
+document.querySelector("p").style.backgroundColor = "green";
+</script>
+<button onclick="myFunction()">Try it</button>
+
+<script>
+function myFunction() {
+  document.open();
+  document.write("<h1>Hello World</h1>");
+  document.close();
+}
+</script>
+<body onload="normPara()">
+
+  <h1>The Document Object</h1>
+  <h2>The normalize() Method</h2>
+  
+  <button onclick="addTextNode()">Add a Text Node</button>
+  
+  <button onclick="normPara()">Normalize the Document</button>
+  
+  <p>The document has <span id="cc" style="font-size:20px">1</span> child node(s).</p>
+  
+  <script>
+  function addTextNode() {
+  const textNode= document.createTextNode("Click again. ");
+  const body = document.body;
+  body.appendChild(textNode);
+  const cc = document.getElementById("cc");
+    cc.innerHTML = body.childNodes.length;
+  }
+  
+  function normPara() {
+    document.normalize();
+    const body = document.body;
+    const cc = document.getElementById("cc");
+    cc.innerHTML = body.childNodes.length;
+  }
+  </script>
+<p id="dmo"></p>
+
+<script>
+let text = document.lastModified;
+document.getElementById("dmo").innerHTML = text;
+</script>  
+
+<iframe id="myFrame" src="file.html" style="height:380px;width:100%;"></iframe>
+
+<p>Click "Import" to import the first H1 element in the iframe (another document).</p>
+
+<button onclick="myFunction()">Import</button>
+
+<script>
+function myFunction() {
+  const frame = document.getElementById("myFrame");
+  const h1 = frame.contentWindow.document.getElementsByTagName("H1");
+  const node = document.importNode(h1, true);
+  document.body.appendChild(node);
+}
+</script>
+
+<!-- <img src="C:\Users\Gokul\Desktop\download.jpg" alt="flower" width="450" height="300">
+<img src="C:\Users\Gokul\Desktop\images.jpg" alt="flower" width="450" height="300">
+<img src="C:\Users\Gokul\Desktop\download (2).jpg" alt="Smiley face" width="450" height="300">
+
+<p>The number of images is:</p>
+<p id="demo"></p>
+
+<script>
+let numb = document.images.length;
+document.getElementById("demo").innerHTML = numb;
+</script> -->
+<p>Add array items to an empty list:</p>
+
+<ul id="myList">
+</ul>
+
+<script>
+const fruits = ["Banana", "Orange", "Mango"];
+
+// Create a document fragment:
+const dFrag = document.createDocumentFragment();
+for (let x in fruits) {
+  const li = document.createElement('li');
+  li.textContent = fruits[x];
+  dFrag.appendChild(li);
+}
+
+// Add fragment to a list: 
+document.getElementById('myList').appendChild(dFrag);
+</script>
+
+</script>
+<p>The title of this document is:</p>
+<p id="do"></p>
+
+<script>
+document.getElementById("do").innerHTML = document.title;
+</script>
+
+<h1>The Element Object</h1>
+<h2>The title Property</h2>
+
+<p><abbr id="myAbbr" title="World Health Organization">WHO</abbr> was founded in 1948.</p>
+
+<p>The title of the abbr element is:</p>
+<p id="demo"></p>
+
+<script>
+const element = document.getElementById("myAbbr");
+document.getElementById("demo").innerHTML = element.title;
+</script>
+
+<h1>The Element Object</h1>
+<h2>The textContent Property</h2>
+
+<button id="myBtn">Try it</button>
+
+<p>The text content of the button is:</p>
+<p id="demo"></p>
+
+<script>
+let tex = document.getElementById("myBtn").textContent;
+document.getElementById("demo").innerHTML = tex;  
+</script>
+
+
+<p>Click on any elements in this document to see which element triggered the onclick event.</p>
+
+<button>This is a button</button>
+
+<p><span>This is span element.</span></p>
+
+<p id="demo"></p>
+
+<script>
+function myFunction(event) { 
+  const element = event.target;
+  document.getElementById("demo").innerHTML = "Triggered by " + element.tagName;
+}
+</script>
+
+<h2>JavaScript HTML DOM</h2>
+
+<p>Hello World!</p>
+
+<p>Hello Norway!</p>
+
+<p>Click the button to change the color of all p elements.</p>
+
+<button onclick="myFunction()">Try it</button>
+
+<script>
+function myFunction() {
+  const myNodelist = document.querySelectorAll("p");
+  for (let i = 0; i < myNodelist.length; i++) {
+    myNodelist[i].style.color = "red";
+  }
+}
+</script>
+
+  <div id="div1">
+    <p id="p1">This is a paragraph.</p>
+    <p id="p2">This is another paragraph.</p>
+  </div>
+    <script>
+       const para=document.createElement("p");
+       const node=document.createTextNode("this s is a textnode")
+       para.appendChild(node);
+       const ele=document.getElementById("div1");
+       ele.appendChild(para);
+     </script>
+
+</body>
+
+
+</html>

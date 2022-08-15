@@ -1,0 +1,88 @@
+<html>
+    <head>
+        <title>
+            Console Api
+        </title>
+    </head>
+    <body>
+        <script>
+            window.console.error("you made a window console");// window.console.error
+            console.error("you made a mistake");//console.eror
+            const a=5;
+            const b=5;
+            const c={firstname:"jay",lastname:"kumar"};
+            console.assert(a+b==0,c);//console.assert (when assertion failed)
+
+            // count the value
+            for(let i=0;i<5;i++){
+                console.count();
+                console.count();     //console.count by default
+                console.count("mylabel");    //console.count by name is mylabel
+                console.count("mylabel");
+                console.count("");    //no label console count
+                console.count("");
+                console.countReset("mylabel");     //reset the cout value to 0
+            }
+
+            //error console
+            const ar=["orange","banana","graphes"]
+            console.error(ar);     //return array method with index value
+            const obj={firstname:"jay",lastname:"kumar"}            
+            console.error(obj);  
+            console.count(obj);  // return obj element with keys and value
+
+            //group console.groupcollapsed,,groupend (under  this heading print the values)
+            console.log("hello");
+            console.group("mylabel");
+            console.log("inside with label");
+            console.log("hello group");
+            console.groupCollapsed("something")
+            console.log("inside with label");
+            console.log("hello group");
+            console.groupEnd();
+            console.log("group end");
+
+            // (inforamtion write a message)
+            const ars=["orange","banana","graphes"]
+            console.info(ars);//return array method with index value
+            const ob={firstname:"jay",lastname:"kumar"}            
+            console.info(ob);// return obj element with keys and value
+
+            //table method writes a table in console (tabledata,tablecolumns)
+            console.table({firstname:"jay",lastname:"kumar"})
+            const car1={name:"audi",model:"A4"}
+            const car2={name:"volvo",model:"XC90"}
+            const car3={name:"ford",model:"fusion"}
+            console.table([car1,car2,car3],["name"]);
+
+            /*time (for loop if the value is decrease timer is aslo consume less 
+            but the values is increase the timer  is also increase....
+            In while loop the value is decrease timer is increase the value is 
+            increase timer is decrease)*/
+            console.time("test1");   //by name to print the execute time 
+            for(let i=0;i<1000;i++){
+                console.log("hello");
+            }
+            console.timeLog("test1");
+            console.timeEnd("test1");
+            let i=0;
+            console.time("while loop");
+            while (i<1000) {
+                i++;
+                console.log("hell");
+            }
+            console.timeEnd("while loop");
+
+           //warning message
+           const arsa=["orange","banana","graphes"]
+            console.warn(arsa);//return array method with index value
+            const oba={firstname:"jay",lastname:"kumar"}            
+            console.warn(oba);
+
+           
+           // console.clear()//clear the console 
+        </script>
+        <button onclick="my">dd</button>
+    </body>
+
+</html>

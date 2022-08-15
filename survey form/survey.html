@@ -1,0 +1,104 @@
+<html>
+    <head>
+        <title>
+            Survey form
+        </title>
+        <link rel="stylesheet" href="./survey.css">
+    </head>
+    <body>
+        <h1 >Application💚💛💙 &#128512 &#128519 Form</h1>
+        <form autocomplete="off" >
+            <fieldset>
+                <legend>Profile Details</legend>
+                <label for="fname">Firstname :
+                    <input type="text" id="name" value="" autofocus><br><br>
+                </label>
+                <label for="lname">Lastname :
+                    <input type="text" id="name" value=""><br><br>
+                </label>
+                <label for="age">Age :
+                    <input type="text" id="age" value=""><br><br>
+                </label>    
+                <label>Select your gender :</label><br>
+                <label for="male">
+                    <input type="radio" id="male" name="M" >Male
+                </label><br>
+                <label for="female">
+                    <input type="radio" id="female" name="M">Female
+                </label><br>
+                <label for="transgender">
+                    <input type="radio" id="transgender" name="M">Transgender
+                </label><br><br>
+                <label for="email">Email :
+                    <input type="email" id="email" required><br><br>
+                </label>
+                <label for="url">Enter your valid linedin url:
+                    <input type="url" id="linkedin">
+                </label><br><br>
+                <label for="datetime">Select your date of birth :
+                    <input type="date" id="date" name="d" ><br><br>
+                </label>
+                <label> Phone :
+                    <input type="tel" id="phone" name="phonenumber" pattern="[0-9]{3}-[0-9]{4}-[0-9]{3}" size="10" maxlength="10"><br><br>
+                </label>
+                <label> Upload ur CV in document :
+                    <input type="file" id="file" name="cvfile" ><br><br>
+                </label>
+                <label>Skills :<br>
+                    <input type="checkbox" id="C" name="Skills_list">C<br>
+                </label>
+                <label>
+                    <input type="checkbox" id="C++" name="Skills_list">C++<br>
+                </label>
+                <label>
+                    <input type="checkbox" id="Java" name="Skills_list">Java<br>
+                </label>
+                <label>
+                    <input type="checkbox" id="Python" name="Skills_list">Python<br>
+                </label>
+                <label>
+                    <input type="checkbox" id="C#" name="Skills_list">C#<br>
+                </label>
+                <label>
+                    <input type="checkbox" id=".Net" name="Skills_list">.Net<br>
+                </label><br>
+                <label for="state">State:
+                    <input list="states" name="state">
+                    <datalist id="states">
+                        <option value="Tamil Nadu">
+                        <option value="Karnataka">
+                        <option value="Andhra">
+                        <option value="Kerala">
+                    </datalist>
+                </label><br><br>
+                <label>City:
+                    <select id="city" name="city">
+                        <option value="Dharmapuri">Dharmapuri
+                        </option>
+                        <option value="Krishnagiri">Krishnagiri
+                        </option>
+                        <option value="Salem">Salem
+                        </option>
+                        <option value="Kanyakumari">Kanyakumari
+                        </option>
+                        <option value="Coimbatore">Coimbatore
+                        </option>
+                        <option value="Hosur">Hosur
+                        </option>
+                        <option value="Thirupathur">Thirupathur
+                        </option>
+                    </select>
+                </label><br><br>
+                <label for="textarea">Comments:<br>
+                    <textarea name="messages" rows="10" cols="15" readonly>Comments are readonly...
+                    </textarea>
+                </label><br><br>
+                <button type="submit" >Submit 
+                </button>
+                <p>&#128519</p>
+            </fieldset>   
+        </form>
+        <p >&#128519</p>
+    </body>
+
+</html>
